@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Budget Planner</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="box">
+    <h2>House Budget Planner</h2>
+
+    <form method="POST" action="/calculate">
+        <label>City</label>
+        <select name="city">
+            <option>Chennai</option>
+            <option>Bangalore</option>
+            <option>Mumbai</option>
+            <option>Delhi</option>
+            <option>Hyderabad</option>
+        </select>
+
+        <label>Area (sq.ft)</label>
+        <input type="number" name="area" required>
+
+        <label>Years in Future </label>
+        <input type="number" name="years" min="1" max="30" required>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if show %}
+    <div class="result">
+        <p><b>City:</b> {{ city }}</p>
+        <p><b>Area:</b> {{ area }} sq.ft</p>
+        <p><b>Years:</b> {{ years }}</p>
+        <p><b>Estimated Cost:</b> ₹ {{ cost }}</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

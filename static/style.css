@@ -1,0 +1,36 @@
+body {
+    background: #f2f2f2;
+    font-family: Arial;
+}
+
+.box {
+    width: 400px;
+    margin: 60px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    background: green;
+    color: white;
+    border: none;
+    margin-top: 15px;
+}
+
+.result {
+    margin-top: 15px;
+    background: #dff0d8;
+    padding: 10px;
+}
